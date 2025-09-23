@@ -1,5 +1,5 @@
 {% set name = "aiocsv" %}
-{% set version = "1.3.2" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/aiocsv-{{ version }}.tar.gz
-  sha256: 806d93465c7808d58d3ff0d2bba270fb4d04b934be6a1e95d0834c50a510910e
+  sha256: f3877e5ef493616a1e0c1365744bbff89184b6f84e9a70859fe319d92060079a
 
 build:
-  skip: True  # [py<38]
+  skip: true  # [py<38]
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 2
+  number: 0
 
 requirements:
   build:
